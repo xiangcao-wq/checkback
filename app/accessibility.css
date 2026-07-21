@@ -1,0 +1,16 @@
+/* Final interaction overrides: keep compact visuals while preserving touch targets. */
+.switch {
+  width: 58px;
+  min-height: 44px;
+  height: 44px;
+  padding: 9px 4px;
+}
+
+.switch.is-on span {
+  transform: translateX(24px);
+}
+
+.prototype-controls > div button {
+  min-height: 44px;
+}
+

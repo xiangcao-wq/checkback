@@ -1,0 +1,399 @@
+{
+    "schema_version":  "checkback.shadow-eval.v1",
+    "suite_id":  "suite-0001",
+    "scope":  "verifier_only",
+    "config":  {
+                   "primary_model":  "qwen3.7-plus-2026-05-26",
+                   "flash_model":  "qwen3.6-flash-2026-04-16",
+                   "plus_model":  "qwen3.7-plus-2026-05-26",
+                   "prompt_version":  "checkback-verifier-v1",
+                   "prompt_sha256":  "30e5793cbf214c1d4c29ad467c642b382841170f42e84af7a925519069feb49b",
+                   "primary_timeout_ms":  90000,
+                   "fast_timeout_ms":  20000,
+                   "plus_timeout_ms":  90000,
+                   "max_retries":  0
+               },
+    "cases":  [
+                  {
+                      "case_id":  "case-0001",
+                      "scene_id":  "scene-0001",
+                      "trial_id":  "trial-0001",
+                      "split":  "smoke",
+                      "scenario":  "desk",
+                      "candidates":  [
+                                         "item-0001"
+                                     ],
+                      "ground_truth":  {
+                                           "items":  [
+                                                         {
+                                                             "id":  "item-0001",
+                                                             "state":  "missing",
+                                                             "observability":  "supported",
+                                                             "expected_zone":  null
+                                                         }
+                                                     ],
+                                           "truth_source":  "staged_protocol",
+                                           "truth_locked_before_output":  true,
+                                           "labeler_count":  2,
+                                           "adjudication":  "agreed"
+                                       },
+                      "primary_latency_ms":  7000,
+                      "flash":  {
+                                    "outcome":  "success",
+                                    "latency_ms":  3000,
+                                    "batch":  {
+                                                  "verifications":  [
+                                                                        {
+                                                                            "id":  "item-0001",
+                                                                            "verdict":  "confirmed_missing",
+                                                                            "certainty":  "high",
+                                                                            "current_location":  null
+                                                                        }
+                                                                    ]
+                                              }
+                                },
+                      "plus":  {
+                                   "outcome":  "success",
+                                   "latency_ms":  5000,
+                                   "batch":  {
+                                                 "verifications":  [
+                                                                       {
+                                                                           "id":  "item-0001",
+                                                                           "verdict":  "confirmed_missing",
+                                                                           "certainty":  "high",
+                                                                           "current_location":  null
+                                                                       }
+                                                                   ]
+                                             }
+                               },
+                      "day_bucket":  "day-001",
+                      "time_period":  "morning",
+                      "cohort":  "representative",
+                      "sampling_plan_id":  "plan-0001",
+                      "execution":  {
+                                        "execution_id":  "execution-0001",
+                                        "config_sha256":  "5c89c6672dc299742c7fbb16620de225b1fa65ffe285a72f226754ac12b8c572",
+                                        "primary_calls":  1,
+                                        "flash_calls":  1,
+                                        "plus_calls":  1,
+                                        "retry_calls":  0,
+                                        "total_calls":  3
+                                    }
+                  },
+                  {
+                      "case_id":  "case-0002",
+                      "scene_id":  "scene-0001",
+                      "trial_id":  "trial-0002",
+                      "split":  "smoke",
+                      "scenario":  "desk",
+                      "candidates":  [
+                                         "item-0002"
+                                     ],
+                      "ground_truth":  {
+                                           "items":  [
+                                                         {
+                                                             "id":  "item-0002",
+                                                             "state":  "same_place",
+                                                             "observability":  "supported",
+                                                             "expected_zone":  null
+                                                         }
+                                                     ],
+                                           "truth_source":  "staged_protocol",
+                                           "truth_locked_before_output":  true,
+                                           "labeler_count":  2,
+                                           "adjudication":  "agreed"
+                                       },
+                      "primary_latency_ms":  6500,
+                      "flash":  {
+                                    "outcome":  "success",
+                                    "latency_ms":  2800,
+                                    "batch":  {
+                                                  "verifications":  [
+                                                                        {
+                                                                            "id":  "item-0002",
+                                                                            "verdict":  "visible_same_place",
+                                                                            "certainty":  "high",
+                                                                            "current_location":  null
+                                                                        }
+                                                                    ]
+                                              }
+                                },
+                      "plus":  {
+                                   "outcome":  "success",
+                                   "latency_ms":  4800,
+                                   "batch":  {
+                                                 "verifications":  [
+                                                                       {
+                                                                           "id":  "item-0002",
+                                                                           "verdict":  "visible_same_place",
+                                                                           "certainty":  "high",
+                                                                           "current_location":  null
+                                                                       }
+                                                                   ]
+                                             }
+                               },
+                      "day_bucket":  "day-001",
+                      "time_period":  "midday",
+                      "cohort":  "representative",
+                      "sampling_plan_id":  "plan-0001",
+                      "execution":  {
+                                        "execution_id":  "execution-0002",
+                                        "config_sha256":  "5c89c6672dc299742c7fbb16620de225b1fa65ffe285a72f226754ac12b8c572",
+                                        "primary_calls":  1,
+                                        "flash_calls":  1,
+                                        "plus_calls":  1,
+                                        "retry_calls":  0,
+                                        "total_calls":  3
+                                    }
+                  },
+                  {
+                      "case_id":  "case-0003",
+                      "scene_id":  "scene-0001",
+                      "trial_id":  "trial-0003",
+                      "split":  "smoke",
+                      "scenario":  "desk",
+                      "candidates":  [
+                                         "item-0003"
+                                     ],
+                      "ground_truth":  {
+                                           "items":  [
+                                                         {
+                                                             "id":  "item-0003",
+                                                             "state":  "same_place",
+                                                             "observability":  "supported",
+                                                             "expected_zone":  null
+                                                         }
+                                                     ],
+                                           "truth_source":  "staged_protocol",
+                                           "truth_locked_before_output":  true,
+                                           "labeler_count":  2,
+                                           "adjudication":  "agreed"
+                                       },
+                      "primary_latency_ms":  7200,
+                      "flash":  {
+                                    "outcome":  "success",
+                                    "latency_ms":  2900,
+                                    "batch":  {
+                                                  "verifications":  [
+                                                                        {
+                                                                            "id":  "item-0003",
+                                                                            "verdict":  "confirmed_missing",
+                                                                            "certainty":  "high",
+                                                                            "current_location":  null
+                                                                        }
+                                                                    ]
+                                              }
+                                },
+                      "plus":  {
+                                   "outcome":  "success",
+                                   "latency_ms":  5000,
+                                   "batch":  {
+                                                 "verifications":  [
+                                                                       {
+                                                                           "id":  "item-0003",
+                                                                           "verdict":  "visible_same_place",
+                                                                           "certainty":  "high",
+                                                                           "current_location":  null
+                                                                       }
+                                                                   ]
+                                             }
+                               },
+                      "day_bucket":  "day-001",
+                      "time_period":  "evening",
+                      "cohort":  "representative",
+                      "sampling_plan_id":  "plan-0001",
+                      "execution":  {
+                                        "execution_id":  "execution-0003",
+                                        "config_sha256":  "5c89c6672dc299742c7fbb16620de225b1fa65ffe285a72f226754ac12b8c572",
+                                        "primary_calls":  1,
+                                        "flash_calls":  1,
+                                        "plus_calls":  1,
+                                        "retry_calls":  0,
+                                        "total_calls":  3
+                                    }
+                  },
+                  {
+                      "case_id":  "case-0004",
+                      "scene_id":  "scene-0002",
+                      "trial_id":  "trial-0001",
+                      "split":  "smoke",
+                      "scenario":  "desk",
+                      "candidates":  [
+                                         "item-0004"
+                                     ],
+                      "ground_truth":  {
+                                           "items":  [
+                                                         {
+                                                             "id":  "item-0004",
+                                                             "state":  "missing",
+                                                             "observability":  "supported",
+                                                             "expected_zone":  null
+                                                         }
+                                                     ],
+                                           "truth_source":  "staged_protocol",
+                                           "truth_locked_before_output":  true,
+                                           "labeler_count":  2,
+                                           "adjudication":  "agreed"
+                                       },
+                      "primary_latency_ms":  7200,
+                      "flash":  {
+                                    "outcome":  "timeout",
+                                    "latency_ms":  20000
+                                },
+                      "plus":  {
+                                   "outcome":  "success",
+                                   "latency_ms":  5200,
+                                   "batch":  {
+                                                 "verifications":  [
+                                                                       {
+                                                                           "id":  "item-0004",
+                                                                           "verdict":  "confirmed_missing",
+                                                                           "certainty":  "high",
+                                                                           "current_location":  null
+                                                                       }
+                                                                   ]
+                                             }
+                               },
+                      "day_bucket":  "day-002",
+                      "time_period":  "morning",
+                      "cohort":  "challenge",
+                      "sampling_plan_id":  "plan-0002",
+                      "execution":  {
+                                        "execution_id":  "execution-0004",
+                                        "config_sha256":  "5c89c6672dc299742c7fbb16620de225b1fa65ffe285a72f226754ac12b8c572",
+                                        "primary_calls":  1,
+                                        "flash_calls":  1,
+                                        "plus_calls":  1,
+                                        "retry_calls":  0,
+                                        "total_calls":  3
+                                    }
+                  },
+                  {
+                      "case_id":  "case-0005",
+                      "scene_id":  "scene-0003",
+                      "trial_id":  "trial-0001",
+                      "split":  "smoke",
+                      "scenario":  "lab",
+                      "candidates":  [
+                                         "item-0005"
+                                     ],
+                      "ground_truth":  {
+                                           "items":  [
+                                                         {
+                                                             "id":  "item-0005",
+                                                             "state":  "missing",
+                                                             "observability":  "supported",
+                                                             "expected_zone":  null
+                                                         }
+                                                     ],
+                                           "truth_source":  "staged_protocol",
+                                           "truth_locked_before_output":  true,
+                                           "labeler_count":  2,
+                                           "adjudication":  "agreed"
+                                       },
+                      "primary_latency_ms":  7000,
+                      "flash":  {
+                                    "outcome":  "success",
+                                    "latency_ms":  3000,
+                                    "batch":  {
+                                                  "verifications":  [
+                                                                        {
+                                                                            "id":  "item-0005",
+                                                                            "verdict":  "not_comparable",
+                                                                            "certainty":  "high",
+                                                                            "current_location":  null
+                                                                        }
+                                                                    ]
+                                              }
+                                },
+                      "plus":  {
+                                   "outcome":  "invalid_output",
+                                   "latency_ms":  4000
+                               },
+                      "day_bucket":  "day-002",
+                      "time_period":  "midday",
+                      "cohort":  "challenge",
+                      "sampling_plan_id":  "plan-0002",
+                      "execution":  {
+                                        "execution_id":  "execution-0005",
+                                        "config_sha256":  "5c89c6672dc299742c7fbb16620de225b1fa65ffe285a72f226754ac12b8c572",
+                                        "primary_calls":  1,
+                                        "flash_calls":  1,
+                                        "plus_calls":  1,
+                                        "retry_calls":  0,
+                                        "total_calls":  3
+                                    }
+                  },
+                  {
+                      "case_id":  "case-0006",
+                      "scene_id":  "scene-0004",
+                      "trial_id":  "trial-0001",
+                      "split":  "smoke",
+                      "scenario":  "shared_tools",
+                      "candidates":  [
+                                         "item-0006"
+                                     ],
+                      "ground_truth":  {
+                                           "items":  [
+                                                         {
+                                                             "id":  "item-0006",
+                                                             "state":  "missing",
+                                                             "observability":  "not_comparable",
+                                                             "expected_zone":  null
+                                                         }
+                                                     ],
+                                           "truth_source":  "staged_protocol",
+                                           "truth_locked_before_output":  true,
+                                           "labeler_count":  2,
+                                           "adjudication":  "agreed"
+                                       },
+                      "primary_latency_ms":  6800,
+                      "flash":  {
+                                    "outcome":  "success",
+                                    "latency_ms":  2700,
+                                    "batch":  {
+                                                  "verifications":  [
+                                                                        {
+                                                                            "id":  "item-0006",
+                                                                            "verdict":  "not_comparable",
+                                                                            "certainty":  "high",
+                                                                            "current_location":  null
+                                                                        }
+                                                                    ]
+                                              }
+                                },
+                      "plus":  {
+                                   "outcome":  "success",
+                                   "latency_ms":  4700,
+                                   "batch":  {
+                                                 "verifications":  [
+                                                                       {
+                                                                           "id":  "item-0006",
+                                                                           "verdict":  "not_comparable",
+                                                                           "certainty":  "high",
+                                                                           "current_location":  null
+                                                                       }
+                                                                   ]
+                                             }
+                               },
+                      "day_bucket":  "day-002",
+                      "time_period":  "evening",
+                      "cohort":  "challenge",
+                      "sampling_plan_id":  "plan-0002",
+                      "execution":  {
+                                        "execution_id":  "execution-0006",
+                                        "config_sha256":  "5c89c6672dc299742c7fbb16620de225b1fa65ffe285a72f226754ac12b8c572",
+                                        "primary_calls":  1,
+                                        "flash_calls":  1,
+                                        "plus_calls":  1,
+                                        "retry_calls":  0,
+                                        "total_calls":  3
+                                    }
+                  }
+              ],
+    "sampling_plan":  {
+                          "representative_plan_id":  "plan-0001",
+                          "challenge_plan_id":  "plan-0002",
+                          "locked_before_collection":  true
+                      }
+}

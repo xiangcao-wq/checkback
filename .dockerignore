@@ -1,0 +1,17 @@
+.git
+.next
+dist
+node_modules
+.env
+.env.*
+.openai
+.wrangler
+output
+design-system
+examples
+tests
+worker
+build
+db
+drizzle
+vite.config.ts

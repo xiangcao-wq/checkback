@@ -1,0 +1,52 @@
+{
+  "name": "checkback-web",
+  "version": "0.2.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vinext dev",
+    "build": "vinext build",
+    "start": "vinext start",
+    "test": "npm run build && node --experimental-strip-types --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "test:collector": "node --experimental-strip-types --test --test-isolation=none tests/shadow-collector-contracts.test.mjs tests/shadow-collector.test.mjs",
+    "test:live-shadow-core": "node --experimental-strip-types --test --test-isolation=none tests/live-shadow-contracts.test.mjs tests/live-shadow-request.test.mjs tests/live-shadow-anchor.test.mjs tests/live-shadow-authority.test.mjs tests/live-shadow-gateway.test.mjs tests/live-shadow-concurrency.test.mjs tests/live-shadow-anchor-cross-process-race.test.mjs tests/live-shadow-hard-crash.test.mjs tests/live-shadow-zero-network.test.mjs",
+    "eval:shadow:rehearse": "node --experimental-strip-types scripts/rehearse-shadow-collector.mjs",
+    "eval:live-shadow:rehearse": "node --experimental-strip-types scripts/rehearse-live-shadow-safety.mjs",
+    "eval:shadow": "node --experimental-strip-types scripts/evaluate-shadow.mjs",
+    "eval:shadow:gate": "node --experimental-strip-types scripts/evaluate-shadow.mjs --enforce-verifier-gates",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "drizzle-orm": "0.45.2",
+    "next": "16.2.6",
+    "openai": "^6.46.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "ws": "^8.21.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.37.1",
+    "@cloudflare/workers-types": "^4.20260702.1",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.26",
+    "drizzle-kit": "0.31.10",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3",
+    "vinext": "0.0.50",
+    "vite": "8.0.13",
+    "wrangler": "4.92.0"
+  },
+  "type": "module"
+}
