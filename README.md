@@ -188,8 +188,9 @@ sudo systemctl reload nginx
 ```
 
 `deploy/self-host/nginx-checkback.conf` expects the Nginx GeoIP2 module and the
-database at `/etc/checkback/geoip/iptoasn-country.mmdb`. Adapt the domain,
-certificate, and authentication paths when using the file on another server.
+database at `/etc/checkback/geoip/iptoasn-country.mmdb`. Adapt the domain and
+certificate paths when using the file on another server. The competition demo
+is public by default; add an access policy only for private deployments.
 
 ## Useful Commands
 
